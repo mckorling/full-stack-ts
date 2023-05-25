@@ -1,0 +1,86 @@
+# schema.graphql
+# graphql schema, it describes the types, source of truth
+# there are extensions that will highlight this code
+# set of interfaces, essentially
+# three types
+# Query: special type in graphql, think of it as GET request in http
+# no concept of a tuple in graphql
+# by default elements are optional, the value could be null
+# '!' means non-nullable, have to say when something is required
+# [Suggestion!]! : the members of collection cannot be null, the collection itself could not be null, but it could be empty
+# string, boolean, number, int, primitive entities
+type Query {
+  currentUser: User!
+  suggestions: [Suggestion!]!
+  tweets: [Tweet!]!
+  trends: [Trend!]!
+}
+# top level collection of resolvers
+type Mutation {
+  createTweet(userId: String!, body: String!): Tweet!
+  createFavorite(favorite: FavoriteInput!): Favorite!
+  deleteFavorite(favorite: FavoriteInput!): Favorite!
+}
+# input type, reusable object type that might be referred to in variables for mutations or queries
+input FavoriteInput {
+  userId: String!
+  tweetId: String!
+}
+type User {
+  id: String!
+  name: String!
+  handle: String!
+  coverUrl: String!
+  avatarUrl: String!
+  createdAt: String!
+  updatedAt: String!
+  stats: UserStats
+  favorites: [Favorite!]
+}
+type Suggestion {
+  name: String!
+  handle: String!
+  avatarUrl: String!
+  reason: String!
+}
+type UserStats {
+  tweetCount: Int!
+  followingCount: Int!
+  followerCount: Int!
+}
+type Tweet {
+  id: String!
+  body: String!
+  createdAt: String!
+  updatedAt: String!
+  author: User
+  stats: TweetStats
+}
+type TweetStats {
+  favoriteCount: Int!
+  retweetCount: Int!
+  commentCount: Int!
+}
+type Favorite {
+  id: String!
+  tweet: Tweet!
+  user: User!
+  createdAt: String!
+  updatedAt: String!
+}
+type HashtagTrend {
+  hashtag: String!
+  tweetCount: Int!
+}
+type TopicTrendQuote {
+  title: String!
+  description: String!
+  imageUrl: String!
+}
+type TopicTrend {
+  topic: String!
+  tweetCount: Int!
+  quote: TopicTrendQuote
+}
+union Trend = TopicTrend | HashtagTrend
+# get a mix of both

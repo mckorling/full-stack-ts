@@ -34,6 +34,34 @@
       "createdAt": "2022-03-23T03:55:59.614Z",
       "updatedAt": "2022-03-23T03:55:59.614Z",
       "id": "tweet-1220baa2-2092-4ed8-a72c-91757dc508f7"
+    },
+    {
+      "message": "tweet number 1!",
+      "userId": "user-15a37948-7712-4e0b-a554-2fef33f31697",
+      "createdAt": "2023-05-24T23:26:49.819Z",
+      "updatedAt": "2023-05-24T23:26:49.819Z",
+      "id": "tweet-83868e5c-1b85-4462-86d0-82556a5aa344"
+    },
+    {
+      "message": "This is the second tweet!",
+      "userId": "user-15a37948-7712-4e0b-a554-2fef33f31697",
+      "createdAt": "2023-05-24T23:39:25.865Z",
+      "updatedAt": "2023-05-24T23:39:25.865Z",
+      "id": "tweet-d95581d3-56a5-41f6-a55b-264f7a71607a"
+    },
+    {
+      "message": "Third tweet",
+      "userId": "user-15a37948-7712-4e0b-a554-2fef33f31697",
+      "createdAt": "2023-05-24T23:41:49.478Z",
+      "updatedAt": "2023-05-24T23:41:49.478Z",
+      "id": "tweet-0068c310-22b4-475d-98b2-50338d7d4576"
+    },
+    {
+      "message": "now what",
+      "userId": "user-15a37948-7712-4e0b-a554-2fef33f31697",
+      "createdAt": "2023-05-24T23:43:05.726Z",
+      "updatedAt": "2023-05-24T23:43:05.726Z",
+      "id": "tweet-93e9c17a-0033-4eb6-ad6c-abe73b493635"
     }
   ],
   "users": [
@@ -146,6 +174,20 @@
       "createdAt": "2022-03-23T03:55:59.617Z",
       "updatedAt": "2022-03-23T03:55:59.617Z",
       "id": "favorite-a4e781ad-1c7b-4e62-b9dd-66b4e36e390b"
+    },
+    {
+      "userId": "user-15a37948-7712-4e0b-a554-2fef33f31697",
+      "tweetId": "tweet-93e9c17a-0033-4eb6-ad6c-abe73b493635",
+      "createdAt": "2023-05-25T01:55:41.332Z",
+      "updatedAt": "2023-05-25T01:55:41.332Z",
+      "id": "favorite-88b6087b-6378-45aa-9330-c931cc02b5ac"
+    },
+    {
+      "userId": "user-15a37948-7712-4e0b-a554-2fef33f31697",
+      "tweetId": "tweet-0068c310-22b4-475d-98b2-50338d7d4576",
+      "createdAt": "2023-05-25T01:55:42.527Z",
+      "updatedAt": "2023-05-25T01:55:42.527Z",
+      "id": "favorite-c57b99f3-7fdf-47c8-bf3d-aa7cb6425776"
     }
   ],
   "hashtagTrends": [
